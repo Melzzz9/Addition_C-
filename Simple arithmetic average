@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    float n1, n2, n3, mediaarit;
+    printf("\nInsira as notas do aluno:\n");
+    scanf("%f%*c", &n1);
+    scanf("%f%*c", &n2);
+    scanf("%f%*c", &n3);
+    //calculo da media aritmetica
+    mediaarit = (n1 + n2 + n3)/3;
+    printf("\nMedia aritmetica do aluno: %f\n", mediaarit);
+    getchar();
+    return 0;
+}
