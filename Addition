@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int n1, n2, n3, n4, soma;
+    //print da mensagem
+    printf("\nDigite os quatro numeros para soma\n");
+    //scan f para receber os resultados
+    scanf("%d%*c", &n1);
+    scanf("%d%*c", &n2);
+    scanf("%d%*c", &n3);
+    scanf("%d%*c", &n4);
+    //operacao
+    soma = n1 + n2 + n3 + n4;
+    //print na tela do resultado
+    printf("\nResultado da soma: %d\n", soma);
+    getchar();
+    return 0;
+}
