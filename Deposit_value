@@ -1,0 +1,17 @@
+//Write a program that takes the amount of a deposit and the amount of the interest rate, calculates and displays the amount of yield and the total amount after yield.
+#include <stdio.h>
+int main()
+{
+    float deposito, taxajuros, rendimento, vtotal;
+    printf("\nDigite o valor do deposito:\n");
+    //scanf para o valor do deposito
+    scanf("%f%*c", &deposito);
+    printf("\nDigite o valor da taxa de juros:\n");
+    scanf("%f%*c", &taxajuros);
+    //calculo do rendimento
+    rendimento = deposito * (taxajuros/100+1);
+    vtotal = deposito + rendimento;
+    printf("\nO rendimento eh de: %9.2f, totalizando na conta: %9.2f\n", rendimento, vtotal);
+    getchar();
+    return 0;
+}
