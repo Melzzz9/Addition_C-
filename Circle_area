@@ -1,0 +1,15 @@
+//calculates circle area
+#include <stdio.h>
+int main()
+{
+    float area, raio;
+    #define pi 3.1415
+    printf("\nDigite o valor do raio do circulo:\n");
+    //scan f para receber o raio
+    scanf("%f%*c", &raio);
+    //calculo
+    area = pi * (raio * raio);
+    printf("\nArea do circulo igual a: %5.2f\n", area);
+    getchar();
+    return 0;
+}
