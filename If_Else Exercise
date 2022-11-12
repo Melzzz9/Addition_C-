@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float salmin, hrstra, depends, hrsext, salbrut, salliq, salfinal;
+    //salarios, horas trabalhadas, dependentes, hora extra, gratific, imposto
+    printf("Digite o valor do salario minimo: ");
+    scanf("%f%*c", &salmin);
+    printf("Digite o numero de horas trabalhadas: ");
+    scanf("%f%*c", &hrstra);
+    printf("Digite o numero de dependentes: ");
+    scanf("%f%*c", &depends);
+    printf("Digite o numero de horas EXTRAS trabalhadas: ");
+    scanf("%f%*c", &hrsext);
+    //calcular sal mes e sal brut, valores hrs
+    salbrut = (hrstra * (salmin/5)) + (32 * depends) + (hrsext * (1.5 * (salmin/5)));
+    //imposto e sal liquido
+    if (salbrut >= 200 && salbrut <= 500)
+    {
+        salliq = salbrut - (0.10 * salbrut);
+        if (salliq <= 350)
+        {
+            salfinal = salliq + 100;
+            printf("Salario a receber: %5.2f", salfinal);
+        }
+        else
+        {
+            (salliq > 350);
+            salfinal = salliq + 50;
+            printf("Salario a receber: %5.2f", salfinal);
+        }
+    }
+    else if (salbrut > 500)
+    {
+        salliq = salbrut - (0.20 * salbrut);
+        if (salliq <= 350)
+        {
+            salfinal = salliq + 100;
+            printf("Salario a receber: %5.2f", salfinal);
+        }
+        else
+        {
+            (salliq > 350);
+            salfinal = salliq + 50;
+            printf("Salario a receber: %5.2f", salfinal);
+        }
+    }
+    else
+    {
+        (salbrut < 200);
+        salfinal = salliq;
+        printf("Salario a receber: %5.2f", salfinal);
+    }
+    getchar();
+    return 0;
+}
