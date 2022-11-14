@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float num1, num2, soma, raiz;
+    int option;
+    //menu de opcoes
+    printf("\n1 - Somar dois numeros");
+    printf("\n2 - Raiz quadrada de um numero");
+    //solicita a opcao do usuario
+    printf("\nDigite sua escolha: ");
+    scanf("%d%*c", &option);
+    switch(option)
+    {
+        case 1:
+            printf("\nDigite um valor para o primeiro numero: ");
+            scanf("%f%*c", &num1);
+            printf("\nDigite um valor para o segundo numero: ");
+            scanf("%f%*c", &num2);
+            soma = num1 + num2;
+            printf("\nSoma de %7.2f + %7.2f = %7.2f", num1, num2, soma);
+            break;
+        case 2:
+            printf("\Digite um valor: ");
+            scanf("%f%*c", &num1);
+            raiz = sqrt(num1);
+            printf("\nRaiz de %7.2f = %f", num1, raiz);
+            break;
+        default:
+            printf("\Opcao invalida");
+    }
+    getchar();
+}
