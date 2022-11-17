@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num, fatorial;
+    printf("Digite o numero desejado: ");
+    scanf("%d%*c", &num);
+    //for para loop
+    for(fatorial = 1; num > 1; num = num - 1)
+    {
+      fatorial = fatorial * num;
+    }
+
+  printf("\n%d", fatorial);
+  return 0;
+}
